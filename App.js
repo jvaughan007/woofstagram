@@ -5,10 +5,11 @@ import { Formik } from 'formik';
 const App = () => {
 
   const onSubmit = (values) => {
+    
     if (values.password !== values.confirmPass) {
       alert('Passwords do not match, please try again.');
     } else {
-      console.log('Yuhhhhhhhh');
+      console.log('Passwords match! ✅');
     }
   }
 
@@ -78,10 +79,8 @@ const App = () => {
           <Button onPress={handleSubmit} title="Submit" />
         </ScrollView>
       )}
-    
     </Formik>
   );
-
 };
 
 const InputWithLabel = (props) => {
