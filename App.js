@@ -34,18 +34,21 @@ const App = () => {
             placeholder='Type your email here'
             value={values.email}
             onChangeText={handleChange('email')}
+            autoCapitalize='none'
           />
           <InputWithLabel
             label='Password'
             placeholder='Type your password here'
             value={values.password}
             onChangeText={handleChange('password')}
+            autoCapitalize='none'
           />
           <InputWithLabel
             label='Confirm Password'
             placeholder='Confirm Password Here'
             value={values.confirmPass}
             onChangeText={handleChange('confirmPass')}
+            autoCapitalize='none'
           />
           <InputWithLabel
             label='Name'
@@ -81,7 +84,7 @@ const App = () => {
 };
 
 const InputWithLabel = (props) => {
-  const { label, placeholder, value, onChangeText, onSubmitEditing,  } = props;
+  const { label, placeholder, value, onChangeText, onSubmitEditing, autoCapitalize} = props;
 
   return (
     <View style={{ padding: 32 }}>
@@ -95,6 +98,7 @@ const InputWithLabel = (props) => {
         secureTextEntry={label == 'Password' || label == 'Confirm Password' ? true : false}
         onSubmitEditing={onSubmitEditing}
         style={{ padding: 8, fontSize: 16 }}
+        autoCapitalize={autoCapitalize}
       />
     </View>
   );
