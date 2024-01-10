@@ -28,6 +28,7 @@ const App = () => {
     >
       {({ handleChange, handleSubmit, values }) => (
         <ScrollView
+          style={{ marginTop: 75, marginBottom: 75 }}
         >
           <InputWithLabel
             label='Email'
